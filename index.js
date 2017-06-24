@@ -94,12 +94,15 @@ wss.on("connection", function (ws) {
 
                     setRGBLed(data.winner.colour);
                 }
+                console.log("[Player] Tagged "+scored)
                 break;
             case "addplayer":
                 // The system is submitting its ID.
                 var id = dat.split(",")[0];
                 var teamcolour = dat.split(",")[1];
                 data.players[id] = { sock: ws, colour: teamcolour, id: id, hits: 0, points: 0 }
+                console.log("[Player] Added "+id)
+                break;
             default:
                 break;
         }
