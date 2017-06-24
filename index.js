@@ -56,18 +56,14 @@ wss.broadcast = function broadcast(data) {
 };
 
 var app = webInterface(function () {
-    data = {
-        players: {
-
-        },
-        game: "running"
-    }
+    data.players = {}
+    data.game = "running";
     wss.clients.forEach(function (client) {
         client.close()
     })
     console.log("Resetting");
-}, function () {
-    return data
+}, ()=>{
+    return data;
 })
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
