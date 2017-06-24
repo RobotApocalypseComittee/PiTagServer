@@ -70,9 +70,9 @@ app.listen(3000, function () {
 })
 
 wss.on("connection", function (ws) {
-    ws.on("message", function (data) {
+    ws.on("message", function (mydata) {
         // Recieves a message
-        var x = data.split(":")
+        var x = mydata.split(":")
         // Event Name
         var evt = x[0];
         // Event data
