@@ -1,0 +1,27 @@
+{
+  "name": "pi-tag-server",
+  "version": "1.0.0",
+  "description": "The base station server for PiTag",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobotApocalypseComittee/PiTagServer.git"
+  },
+  "keywords": [
+    "esp8266"
+  ],
+  "author": "RobotApocalypseComittee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobotApocalypseComittee/PiTagServer/issues"
+  },
+  "homepage": "https://github.com/RobotApocalypseComittee/PiTagServer#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "pi-blaster.js": "^0.1.1",
+    "ws": "^3.0.0"
+  }
+}
