@@ -65,7 +65,7 @@ var app = webInterface(function () {
     wss.clients.forEach(function (client) {
         client.close()
     })
-    console.log("reset");
+    console.log("Resetting");
 }, function () {
     return data
 })

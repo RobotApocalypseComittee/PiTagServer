@@ -1,4 +1,4 @@
-module.exports = function (get_data, reset) {
+module.exports = function (reset, get_data) {
   const express = require('express')
   const app = express()
   const path = require('path')
