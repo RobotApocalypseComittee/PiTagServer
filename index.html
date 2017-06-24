@@ -1,0 +1,29 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>PiTag</h1>
+        <button id="resetBtn">Reset</button>
+        <button id="updateBtn">Update</button>
+        <ul>
+        </ul>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>
+            $(function() {
+                $("#resetBtn").click(function(){
+                    $.get("/reset");
+                })
+                $('#updateBtn').click(function(){
+                    $("ul").empty();
+                    $.getJSON("/update", function(data){
+                        for (cardID in data.players) {
+                            if (data.players.hasOwnProperty(cardID)){
+                                $("<li></li>").text(cardID).css("color", data.players[cardID].colour).appendTo("ul");
+                            }
+                        }
+                    })
+                })
+            })
+        </script>
+    </body>
+</html>
