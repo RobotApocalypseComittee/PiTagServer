@@ -1,13 +1,16 @@
 <html>
     <head>
+        <title>PiTag - Control</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="pure-min.css">
     </head>
-    <body>
+    <body style="text-align: center;">
         <h1>PiTag</h1>
-        <button id="resetBtn">Reset</button>
-        <button id="updateBtn">Update</button>
+        <button class="pure-button" id="resetBtn">Reset</button>
+        <button class="pure-button" id="updateBtn">Update</button>
         <ul>
         </ul>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="jquery-3.2.1.min.js"></script>
         <script>
             $(function() {
                 $("#resetBtn").click(function(){
